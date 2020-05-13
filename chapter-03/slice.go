@@ -3,7 +3,6 @@ package main
 import f "fmt"
 
 func main() {
-	// 슬라이스 다루기
 
 	var a []int = make([]int, 5)
 	var b = make([]string, 5)
@@ -16,8 +15,8 @@ func main() {
 	}
 	f.Println(a)
 
-	ints := append(a, 6, 7, 8)
-	f.Println("size :", len(ints), ", components :", ints)
+	add := append(a, 6, 7, 8)
+	f.Println("size :", len(add), ", components :", add)
 
 	os := []string{"ios", "linux", "unix", "android", "windows"}
 	f.Println(len(os), cap(os))
