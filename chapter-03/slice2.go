@@ -9,14 +9,14 @@ func main() {
 
 	cloneArray = originalArray
 	cloneArray[0] = 4
-	f.Println("original : ", originalArray, "clone : ", cloneArray)
+	f.Println("배열 복사 : ", "original : ", originalArray, "clone : ", cloneArray)
 
 	originalSlice := []int{1, 2, 3}
 	var cloneSlice []int
 
 	cloneSlice = originalSlice
 	cloneSlice[0] = 4
-	f.Println("original : ", originalSlice, "clone : ", cloneSlice)
+	f.Println("슬라이스 복사 : ", "original : ", originalSlice, "clone : ", cloneSlice)
 
 	f.Println("-------------------------")
 
