@@ -9,7 +9,7 @@ func main() {
 
 	f.Println("goroutun-closures")
 
-	runtime.GOMAXPROCS(1) // sing cpu
+	runtime.GOMAXPROCS(1) // single core
 
 	s := "wisoft"
 
