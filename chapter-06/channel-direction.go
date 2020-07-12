@@ -6,8 +6,8 @@ func main() {
 
 	f.Println("Channel direction")
 
-	pings := make(chan string, 2)
-	pongs := make(chan string, 2)
+	pings := make(chan string, 1)
+	pongs := make(chan string, 1)
 
 	ping(pings, "passed message")
 	pong(pings, pongs)
