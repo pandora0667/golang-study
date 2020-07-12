@@ -1,30 +1,20 @@
 package main
 
 import (
-	f "fmt"
-	"runtime"
+	"fmt"
 	"sync"
 )
 
+var doOnce sync.Once
+
 func main() {
-
-	f.Println("one time exec function")
-
-	runtime.GOMAXPROCS(runtime.NumCPU())
-
-	oneTime := new(sync.Once)
-
-	for i := 0; i < 3; i++ {
-		go func(n int) {
-			f.Println("goroutine : ", n)
-			oneTime.Do(Hello)
-		}(i)
-	}
-	f.Scanln()
+	DoSomething()
+	DoSomething()
 }
 
-func Hello() {
-
-	f.Println("Hello, World")
-
+func DoSomething() {
+	doOnce.Do(func() {
+		fmt.Println("Run once - first time, loading...")
+	})
+	fmt.Println("Run this every time")
 }
