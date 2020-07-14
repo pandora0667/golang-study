@@ -9,7 +9,7 @@ import (
 func main() {
 
 	file, err := os.OpenFile(
-		"hello.txt",
+		"hello2.txt",
 		os.O_CREATE|os.O_RDWR|os.O_TRUNC,
 		os.FileMode(0644))
 
